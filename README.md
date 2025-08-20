@@ -1,22 +1,20 @@
-# Welcome to your Lovable project
+# Front-End Animation Lab
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/61991086-9199-4451-8ced-8aeccc0cc9ee
+A showcase of modern web design with stunning animations, responsive layouts, and professional UX patterns.
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use the Development Server**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/61991086-9199-4451-8ced-8aeccc0cc9ee) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+Start the development server to see the animations and UI components in action.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +60,11 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/61991086-9199-4451-8ced-8aeccc0cc9ee) and click on Share -> Publish.
+This project can be deployed to any static hosting service like Vercel, Netlify, or GitHub Pages.
 
-## Can I connect a custom domain to my Lovable project?
+## Features
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Modern UI components with animations
+- Responsive layouts for all device sizes
+- Professional UX patterns and interactions
+- Multiple example pages showcasing different design concepts

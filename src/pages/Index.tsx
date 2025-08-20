@@ -59,42 +59,83 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-cream/30 to-teal/5">
       {/* Header */}
-      <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
+      <header className="relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Dynamic Background with 3D Perspective */}
+        <div className="absolute inset-0 bg-gradient-hero opacity-90 before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_center,rgba(168,255,242,0.15)_0%,transparent_70%)]">
+          {/* Animated Grid Lines */}
+          <div className="absolute inset-0 opacity-20" 
+               style={{
+                 backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), 
+                                  linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                 backgroundSize: '40px 40px',
+                 backgroundPosition: 'center',
+               }}></div>
+        </div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center text-white">
-          <div className="inline-block mb-6">
-            <div className="w-20 h-20 bg-gradient-teal rounded-3xl mx-auto flex items-center justify-center rotate-slow shadow-teal">
-              <Zap className="w-10 h-10 text-white" />
+          {/* Animated Logo */}
+          <div className="inline-block mb-8" style={{perspective: '1000px'}}>
+            <div className="w-24 h-24 bg-gradient-teal rounded-[30%_70%_40%_60%] mx-auto flex items-center justify-center shadow-teal transform hover:scale-110 transition-transform duration-500">
+              <Zap className="w-12 h-12 text-white" />
             </div>
           </div>
           
-          <h1 className="font-montserrat font-bold text-6xl mb-6 animate-fade-in-up">
-            Front-End Animation Lab
+          {/* Heading with Simple Effect */}
+          <h1 className="font-playfair font-bold text-7xl mb-6 tracking-tight">
+            <span className="inline-block">Front-End</span>{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-light via-white to-coral inline-block">Animation Lab</span>
           </h1>
-          <p className="font-opensans text-xl mb-8 max-w-2xl mx-auto text-gray-200 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            A showcase of modern web design with stunning animations, responsive layouts, and professional UX patterns
+
+          {/* Simple Subtitle */}
+          <p className="font-montserrat text-xl mb-10 max-w-2xl mx-auto text-gray-200 leading-relaxed">
+            Explore a collection of <span className="text-teal-light font-semibold">stunning animations</span>, <span className="text-coral font-semibold">responsive layouts</span>, and <span className="text-amber font-semibold">professional UX patterns</span> for modern web experiences
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full">
-              <Star className="w-4 h-4 text-amber" />
-              <span className="text-sm">4 Unique Projects</span>
+          {/* Feature Pills with Simple Hover Effects */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-5 py-3 rounded-full border border-white/10 hover:bg-white/20 transition-all duration-300 group cursor-pointer">
+              <Star className="w-5 h-5 text-amber" />
+              <span className="text-sm font-medium">4 Unique Projects</span>
             </div>
-            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full">
-              <Palette className="w-4 h-4 text-coral" />
-              <span className="text-sm">Professional Design</span>
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-5 py-3 rounded-full border border-white/10 hover:bg-white/20 transition-all duration-300 group cursor-pointer">
+              <Palette className="w-5 h-5 text-coral" />
+              <span className="text-sm font-medium">Professional Design</span>
             </div>
-            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full">
-              <Zap className="w-4 h-4 text-teal" />
-              <span className="text-sm">Smooth Animations</span>
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-5 py-3 rounded-full border border-white/10 hover:bg-white/20 transition-all duration-300 group cursor-pointer">
+              <Zap className="w-5 h-5 text-teal" />
+              <span className="text-sm font-medium">Smooth Animations</span>
             </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="mt-12">
+            <Button className="bg-gradient-to-r from-teal to-teal-light text-white px-8 py-6 rounded-full text-lg font-medium hover:shadow-teal transition-all duration-300 group">
+              <span>Explore Projects</span>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
 
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-4 h-4 bg-coral rounded-full animate-float opacity-60"></div>
-        <div className="absolute top-40 right-20 w-6 h-6 bg-amber rounded-full animate-float opacity-40" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-20 left-1/4 w-3 h-3 bg-teal rounded-full animate-float opacity-50" style={{animationDelay: '2s'}}></div>
+        {/* Simple Floating Elements */}
+        <div className="absolute top-1/4 left-[10%] w-16 h-16 rounded-full opacity-30"
+             style={{background: 'radial-gradient(circle at center, rgba(255,138,115,0.8), rgba(255,138,115,0))'}}>  
+        </div>
+        <div className="absolute top-1/3 right-[15%] w-24 h-24 rounded-full opacity-20" 
+             style={{background: 'radial-gradient(circle at center, rgba(255,204,77,0.8), rgba(255,204,77,0))'}}>  
+        </div>
+        <div className="absolute bottom-1/4 left-[20%] w-20 h-20 rounded-full opacity-25" 
+             style={{background: 'radial-gradient(circle at center, rgba(77,219,197,0.8), rgba(77,219,197,0))'}}>  
+        </div>
+        <div className="absolute top-[60%] right-[25%] w-12 h-12 rounded-full opacity-30" 
+             style={{background: 'radial-gradient(circle at center, rgba(255,255,255,0.8), rgba(255,255,255,0))'}}>  
+        </div>
+
+        {/* Simple Shapes */}
+        <div className="absolute top-[15%] left-[15%] w-8 h-8 border-2 border-teal/30 rounded-md" 
+             style={{transform: 'rotate(45deg)'}}></div>
+        <div className="absolute bottom-[20%] right-[20%] w-10 h-10 border-2 border-coral/30 rounded-full"></div>
+        <div className="absolute top-[70%] left-[30%] w-6 h-6 border-2 border-amber/30" 
+             style={{clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'}}></div>
       </header>
 
       {/* Project Showcase */}
@@ -114,8 +155,7 @@ const Index = () => {
             return (
               <div
                 key={project.path}
-                className="card-floating p-8 hover:shadow-strong transition-all duration-500 group animate-fade-in-up"
-                style={{animationDelay: project.delay}}
+                className="card-floating p-8 hover:shadow-strong transition-all duration-500 group"
               >
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
@@ -177,8 +217,7 @@ const Index = () => {
             {techStack.map((tech, index) => (
               <div
                 key={tech.name}
-                className="card-floating p-6 text-center hover:scale-105 transition-all duration-300 animate-fade-in-up"
-                style={{animationDelay: `${index * 0.1}s`}}
+                className="card-floating p-6 text-center hover:scale-105 transition-all duration-300"
               >
                 <div className="text-3xl mb-3">{tech.icon}</div>
                 <h3 className="font-opensans font-medium text-charcoal">{tech.name}</h3>
